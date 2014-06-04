@@ -914,6 +914,8 @@ class HDANode:
         idx = dst_node.connections.index(self.nid)
       vals = dst_node.amp_vals_in.get_val_db(idx)
       for idx in range(len(vals)):
+        if vals[idx] is None:
+          continue
         if res[idx]:
           res[idx] += vals[idx]
         else:
