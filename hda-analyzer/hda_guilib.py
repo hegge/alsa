@@ -285,8 +285,9 @@ class NodeGui(gtk.ScrolledWindow):
       frame.set_border_width(4)
       vbox = gtk.VBox(False, 0)
       if caps:
+        str = ''
         if caps.ofs != None:
-          str =  'Offset:          %d\n' % caps.ofs
+          str += 'Offset:          %d\n' % caps.ofs
           str += 'Number of steps: %d\n' % caps.nsteps
           str += 'Step size:       %d\n' % caps.stepsize
         str += 'Mute:            %s\n' % (caps.mute and "True" or "False")
